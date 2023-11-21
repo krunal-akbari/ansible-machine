@@ -1,4 +1,4 @@
 - name: Install tmux
-  pacman: name=tmux
+  apt: name=tmux
   tags:
     - tmux

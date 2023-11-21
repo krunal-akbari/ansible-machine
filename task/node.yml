@@ -1,5 +1,5 @@
 - name: Install pacman
-  pacman:
+  apt:
     name :
       - nodejs
       - npm
