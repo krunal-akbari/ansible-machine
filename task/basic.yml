@@ -1,0 +1,36 @@
+- name: Install System Packages 1 (build-essential, cmake, pkg-config, pthread)
+  become: true
+  pacman:
+    name: ["cmake", "git","make","which"]
+  tags:
+    - install
+    - neovim
+    - core
+    - basic
+    - dotfiles
+
+- name: Install System Packages 2 (lua, unzip, libtool, libtool-bin, gettext)
+  become: true
+  pacman:
+    name: [ "unzip", "libtool", "gettext"]
+  tags:
+    - install
+    - neovim
+    - core
+
+- name: Install System Packages 3 (the rest)
+  become: true
+  pacman:
+    name: [ "curl", "htop", "lsof", "i3", "dconf-editor"]
+  tags:
+    - install
+    - core
+
+- name: Install Clang
+  become: true
+  pacman:
+    name: ["clang" , "clang14"]
+  tags:
+    - install
+    - neovim
+    - core

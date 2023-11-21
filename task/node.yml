@@ -1,0 +1,7 @@
+- name: Install pacman
+  pacman:
+    name :
+      - nodejs
+      - npm
+  tags:
+    - node
