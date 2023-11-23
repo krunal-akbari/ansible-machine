@@ -13,7 +13,8 @@ RUN apt-get update && \
 FROM base AS kishan
 ARG TAGS
 RUN addgroup --gid 1000 kishan
-RUN adduser --gecos theprimeagen --uid 1000 --gid 1000 --disabled-password kishan
+RUN adduser --gecos kishan --uid 1000 --gid 1000 --disabled-password kishan
+RUN echo 'root:root' | chpasswd
 USER kishan
 WORKDIR /home/kishan
 

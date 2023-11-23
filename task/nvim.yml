@@ -1,5 +1,5 @@
 - name: Remove neovim
-  shell: rm -rf ~/neovim
+  shell: rm -rdf ~/neovim
   tags:
     - install
     - neovim
